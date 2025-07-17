@@ -13,7 +13,7 @@ app.use(cors())   //cors allows to connect backend to somthing
 
 //Middleware
 app.use(express.json())
-app.use(clerkMiddleware())
+app.post(clerkMiddleware())
 
 //api to listen to clerk webhooks
 app.use("/api/clerk",clerkWebhooks)
